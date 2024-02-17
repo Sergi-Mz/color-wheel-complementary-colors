@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body id="wheel-body">
+    <!-- <h1>Color wheel</h1> -->
+
+    <div class="settings">
+      <img src="pipette.png" id="pipette" />
+      <canvas id="canvas" width="300" height="250"></canvas>
+      <canvas id="canvas2" width="300" height="250"></canvas>
+
+      <div class="label-wrapper">
+        <label for="color-input">1. pick a color</label>
+      </div>
+
+      <div id="hex-block">
+        <div id="hex-circle"></div>
+        <span id="hex-helper-label">HEX:</span>
+        <input type="text" id="hex-input" maxlength="7" />
+      </div>
+
+      <div class="rgb-input-block">
+        <div id="rgb-helper-label">RGB:</div>
+        <input type="text" id="rgb-input" />
+      </div>
+      <div class="label-wrapper">
+        <label for="combination-input">2. Choose a color combination</label>
+      </div>
+
+      <select id="combination-input">
+        <option value="Complementary">Complementary</option>
+        <option value="Monochromatic">Monochromatic</option>
+        <option value="Analogous">Analogous</option>
+        <option value="Triadic">Triadic</option>
+        <option value="Tetradic">Tetradic</option>
+      </select>
+      <canvas id="colors"></canvas>
+
+      <div class="slider-container">
+        <div id="hex-colors-block">
+          <div class="hex-color-label"></div>
+          <div class="hex-color-label"></div>
+          <div class="hex-color-label"></div>
+          <div class="hex-color-label"></div>
+        </div>
+        <p>3. choose lightness: <span id="sliderValue"></span></p>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+          id="mySlider"
+        />
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
